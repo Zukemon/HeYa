@@ -1,0 +1,122 @@
+{% extends "layout2.html" %}
+
+
+{% block main %}
+    
+    <style>
+        .animated { 
+        background-image: url(static/images/logo.png); 
+        background-repeat: no-repeat;
+        background-position: left center; 
+        background-size: 80px;
+        padding-top:95px;
+        margin-bottom:60px;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s; 
+        -webkit-animation-fill-mode: both; 
+        animation-fill-mode: both; 
+        }
+        
+        @-webkit-keyframes bounce { 
+        0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+        40% {-webkit-transform: translateY(-30px);} 
+        60% {-webkit-transform: translateY(-15px);} 
+        } 
+        
+        @keyframes bounce { 
+        0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+        40% {transform: translateY(-30px);} 
+        60% {transform: translateY(-15px);} 
+        }
+        
+        .bounce { 
+        -webkit-animation-name: bounce; 
+        animation-name: bounce; 
+        }
+
+        .floating { 
+        animation-name: floating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        margin-left: 300px;
+        margin-top: 5px;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  0px); }
+            50%  { transform: translate(0, 15px); }
+            100%   { transform: translate(0, -0px); }   
+        }
+        .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+
+        .hide-loader{
+        display:none;
+        }
+        .container {
+        /* To position the loading */
+        position: relative;
+        }
+
+        .loading {
+        /* Absolute position */
+        left: 0;
+        position: absolute;
+        top: 0;
+        /* Take full size */
+        height: 100%;
+        width: 100%;
+        /* Center */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        }
+    </style>
+
+    <div id = "animatedB" class = "animated bounce"><h1 onclick = "myFunction()">HeYa!</h1></div>
+    <!-- {{ snape }} -->
+    <!-- <form href="taken"> </form> -->
+    <form action="/loader" id="listenL" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="gaya" placeholder="Type in your message here (Less than 21 words!)" type="text">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="maya" placeholder="Select your theme: (1) Summer, (2) Spring, (3) Atumn, or (4) Winter," type="number" max="4" min="0">
+        </div>
+        <a type="submit" href="#loader"><button>Render</button></a>
+    </form>
+
+    <div id = "floatedB" class = "floating"><h1>👋</h1></div>
+
+    <div class="hide-loader"></div>
+    
+    <!-- <button onclick = "myFunction()">Reload page</button> -->
+    
+    <script>
+        function myFunction() {
+            location.reload();
+        }
+
+        
+        
+        $('#loader').addClass("hide-loader")
+
+        
+    </script>
+  
+
+    
+    
+{% endblock %}

@@ -1,0 +1,26 @@
+
+{% extends "layout.html" %}
+
+{% block main %}
+    <style>
+        .floating { 
+        animation-name: floating;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        margin-left: 300px;
+        margin-top: 5px;
+        }
+        
+        @keyframes floating {
+            0% { transform: translate(0,  100px); }
+            50%  { transform: translate(0, 115px); }
+            100%   { transform: translate(0, 100px); }   
+        }
+    </style>
+    {{ hi }}
+
+    <!-- <a href="/heya"><button>HeYa!</button></a> -->
+
+    <div id = "floatedB" class = "floating"><a href="/heya"><img src="static/images/logo.png" width="100">HeYa!</img></a></div>
+{% endblock %}

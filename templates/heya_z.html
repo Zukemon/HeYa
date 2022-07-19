@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    {{ snape }}
+    <!-- <form href="taken"> </form> -->
+    <form action="/heya_z" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="daya" placeholder="First Number" type="number">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="biyu" placeholder="Second Number" type="number">
+        </div>
+        <a type="submit"><button>Add</button></a>
+    </form>
+    
+{% endblock %}
