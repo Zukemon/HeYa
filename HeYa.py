@@ -1,7 +1,8 @@
 from moviepy.editor import *
 # import animation
 # import time
-# import os
+from flask import flash
+import os
 import sys
 # import cv2
 from flask import (
@@ -67,7 +68,6 @@ class Heya(object):
         return str(one), str(two), str(three)
 
 def main():
-    
     try:
         cuz = Heya()
                 
@@ -104,13 +104,14 @@ def main():
 
         title = "_".join(title[:2]).capitalize()
 
+        homeDir = os.path.expanduser("~/Downloads")
+
+        # flash("Rendering card.")
         # long_running_function()
         result = CompositeVideoClip([vid1, txt_clipA, txt_clipB, txt_clipC, vid2]) # Overlay text on video
-        vid_name = f"renders/{title}.webm"
+        vid_name = f"{homeDir}/{title}.webm"
         result.write_videofile(vid_name, fps=25) # Many options...
-                
-        # open_vid(vid_name)
-        sys.exit
+        
     except ValueError:
         sys.exit
 

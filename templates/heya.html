@@ -85,33 +85,31 @@
         }
     </style>
 
-    <div id = "animatedB" class = "animated bounce"><h1 onclick = "myFunction()">HeYa!</h1></div>
-    <!-- {{ snape }} -->
-    <!-- <form href="taken"> </form> -->
-    <form action="/loader" id="listenL" method="post">
-        <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name="gaya" placeholder="Type in your message here (Less than 21 words!)" type="text">
-        </div>
-        <div class="form-group">
-            <input autocomplete="off" autofocus class="form-control" name="maya" placeholder="Select your theme: (1) Summer, (2) Spring, (3) Atumn, or (4) Winter," type="number" max="4" min="0">
-        </div>
-        <a type="submit" href="#loader"><button>Render</button></a>
-    </form>
+    <div >
+        <div id = "animatedB" class = "animated bounce"><h1 onclick = "myFunction()">HeYa!</h1></div>
+        <!-- {{ snape }} -->
+        <!-- <form href="taken"> </form> -->
+        <form action="/heya" method="post">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="gaya" placeholder="Type in your message here (Less than 21 words!)" type="text">
+            </div>
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="maya" placeholder="Select your theme: (1) Summer, (2) Spring, (3) Atumn, or (4) Winter," type="number" max="4" min="0">
+            </div>
+            <a type="submit" id="myP2"><button>Render</button></a>
+        </form>
 
-    <div id = "floatedB" class = "floating"><h1>👋</h1></div>
+        <div id="floatedB" class = "floating"><h1>👋</h1></div>
 
-    <div class="hide-loader"></div>
-    
-    <!-- <button onclick = "myFunction()">Reload page</button> -->
+    </div>
     
     <script>
-        function myFunction() {
-            location.reload();
-        }
+       
 
-        
-        
-        $('#loader').addClass("hide-loader")
+        document.getElementById("myP2").addEventListener("click", function() {
+        alert("Once your card is ready you will be redirected to the home page. Click 'OK' to continue.");
+        }, true);
+
 
         
     </script>

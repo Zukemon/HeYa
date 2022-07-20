@@ -24,6 +24,7 @@ app = Flask(__name__)
 # Ensure temps are auto-reloaded
 app.config["TEMPLATES_AUTO_RELOAD"] = True
 
+app.secret_key = 'hofhu29320ui5u48798232jnpia'
 
 # Ensure responses aren't cached
 @app.after_request
@@ -42,8 +43,10 @@ def heya_x():
 
     if request.method == 'POST':
         # queue()
-       
-        return main()
+
+        main()
+        flash("Please check your 'Downloads' folder for rendered card.")
+        return redirect(url_for("home"))
 
     else:
 
@@ -53,16 +56,8 @@ def heya_x():
 @app.route('/loader', methods=["GET", "POST"])
 def loader():
     if request.method == 'POST':
-        main()
-        flash("Well done!")
+        flash("Check home directory for rendered export")
         return redirect(url_for("heya.home"))
     else:
-        return render_template("loader.html", scan= "rendering out message")
-    
-        
-        
-
-
-
-        
-        
+        flash("Check home directory for rendered export")
+        return redirect(url_for("heya.home"))    
