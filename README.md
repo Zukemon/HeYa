@@ -54,3 +54,23 @@ Heya is a simple App for making video greeting cards. I created it from function
     </td>
   </tr>
 </table>
+
+<h4>Commands to run app on local server (OS X):</h4>
+
+    • Download code. Go to directory. Create virtual environment
+    
+    "pip install virtualenv"
+    
+    • Install requirements
+    
+    "pip install -r requirements.txt"
+    
+    • Activate virtual environment
+    
+    "source venv/bin/activate"
+    
+    • Enter command "flask run"
+    
+    Follow the link while app is running succesfully and app should now be visible in your browser.
+    
+    Use "ctrl c" to quit process.
