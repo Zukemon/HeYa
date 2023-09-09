@@ -13,24 +13,24 @@
 
 
 ## Overview: 
-Heya is a simple App for making video greeting cards. I created it from function I used for my CS50P final project. The app version is a work in progress.
+Heya is a simple App for making video greeting cards. I created it from a function I made during my CS50P course, final project. This version is a work in progress.
 
 ## Usage:
-<p>Once the user enters the landing page, they'll be able to navigate to a "HeYa" page, after following the welcoming message instruction where they will find a form to enter text a message of what they want printed on the video card and also select a theme.
+<p>Once the user enters the landing page, after following the welcoming message instruction they'll be able to navigate to a "HeYa" page. On that page is a form for entering the text for the message that they want printed out on the video card and then they select a theme.
 </p>
 
-    It's a 2 button APP(simple):
-    • Each is pretty much straight-forward and self-explanatory: the heya emoticon/ button to navigate to the next page and the render button.
+    It's a simple 2 button APP:
+    • The heya emoticon/ button to navigate to the next page, and the render button.
 
 ## Setup:
 <p>
-    • The main project folder contains 2 Python scripts, 'project.py' and 'test_project.py', one 'templates' folder and one 'renders' folder.
+    • The main project folder contains 2 Python scripts, 'project.py' and 'test_project.py', one 'templates' folder, and one 'renders' folder.
 </p>    
 <p>
-    • The 'templates' folder has all the templates/ background per video card theme.
+    • The 'templates' folder has all the templates/background per video card theme.
 </p>
 <p>
-    • The 'renders' folder contains all the completed/ rendered out 'HeYa' video cards.
+    • The 'renders' folder contains all the completed/rendered-out 'HeYa' video cards.
 </p> 
 
 <a href= "https://heya.herokuapp.com"><h5>Web App</h5></a>
