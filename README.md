@@ -16,7 +16,7 @@
 Heya is a simple App for making video greeting cards. I created it from a function I made during my CS50P course, final project. This version is a work in progress.
 
 ## Usage:
-<p>Once the user enters the landing page, after following the welcoming message instruction they'll be able to navigate to a "HeYa" page. On that page is a form for entering the text for the message that they want printed out on the video card and then they select a theme.
+<p>Once the user enters the landing page. Here they'll find a welcoming message and instruction to navigate to the "HeYa" page. On that page is a form for entering the text for the message that they want printed out on the video card, and an options menu for selecting a theme.
 </p>
 
     It's a simple 2 button APP:
